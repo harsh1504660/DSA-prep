@@ -15,7 +15,7 @@ int main(){
     m.insert({88,"bheem"});
     for (auto i:m){
 
-        cout<<i.first<<" "<<i.second<<endl;
+        cout<<i.first<<" "<<i.second<<endl; 
     }
 
     cout<<"is 1 presnt"<<m.count(1);
