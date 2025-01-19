@@ -31,7 +31,7 @@ int main(){
     (*t)++;
     cout<<j<<endl;
 
-    //increamenting t
+    //increamenting t  ----. +4 for int  / for double +8
     cout<<"Before inreamenting "<<t<<endl;
     t++;
     cout<<"After increamenting "<<t<<endl;
