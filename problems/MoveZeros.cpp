@@ -13,6 +13,7 @@ void MoveZeros(int arr[],int n){
             swap(arr[i],arr[i+1]);
         }
     }
+    
 }
 
 void print(int arr[],int n){
@@ -20,6 +21,7 @@ void print(int arr[],int n){
 }
 
 int main(){
+
 
 
     return 0;
