@@ -39,13 +39,22 @@ void InsertAthead(Node* & head,int data){
     head-> prev = temp;
     head = temp;
 }
+void InsertAttail(Node* &tail, int data){
+    Node* temp = new Node(data);
+    tail ->next = temp;
+    temp -> prev = tail;
+    tail = temp;
+}
 int main()
 {
     Node* node1 = new Node(10);
     Node* head = node1 ;
+    Node* tail = node1;
     print(head);
     cout<<getLength(head)<<endl;
     InsertAthead(head,11);
+    print(head);
+    InsertAttail(tail,444);
     print(head);
     return 0;
 }
