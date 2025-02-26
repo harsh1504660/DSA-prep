@@ -17,7 +17,7 @@ bool RedundantBrackets(string &s){
                 bool isRedundant = true;
                 while(st.top()!= '('){
                     char top = st.top();
-                    if( ch=='+' || ch=='-' || ch== '*' || ch=='/'){
+                    if( top=='+' || top=='-' || top== '*' || top=='/'){
                       isRedundant = false;
                     }
                     st.pop();
