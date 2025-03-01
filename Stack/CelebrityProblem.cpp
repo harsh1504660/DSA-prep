@@ -19,11 +19,11 @@ int celebrity(vector<vector<int>> &m,int n){
     
     //push all element in stack
     for(int i = 0 ; i<n ; i++){
-        s.push(n);
+        s.push(i);
     }
 
     //step2 : get two elemnts and compare them
-    while(s.size()!=1){
+    while(s.size()>1){
         int a  =s.top();
         s.pop();
 
