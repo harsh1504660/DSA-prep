@@ -34,7 +34,7 @@ node* solve(int in[],int pre[],int index,int inOrderStart,int inOrderEnd ,int n 
     node* root = new node(element);
     int position = findPosition(in,element,n);
 
-    //recursive call
+    //recursive  call
     root->left = solve(in,pre,index,inOrderStart,position-1,n);
     root->right = solve(in,pre,index,position+1,inOrderEnd,n);
 
