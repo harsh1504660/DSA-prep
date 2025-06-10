@@ -59,8 +59,9 @@ int kthAncestor(Node* root, int  k, int node){
         return ans->data;
     }
 }
+
 int main()
 {
-    
+       
     return 0;
 }

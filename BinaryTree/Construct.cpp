@@ -38,7 +38,7 @@ node* solve(int in[],int pre[],int index,int inOrderStart,int inOrderEnd ,int n 
     root->left = solve(in,pre,index,inOrderStart,position-1,n);
     root->right = solve(in,pre,index,position+1,inOrderEnd,n);
 
-    return root;
+    return root ;
 
 }
 
