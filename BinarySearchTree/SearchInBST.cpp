@@ -28,7 +28,7 @@ bool SearchBst(node* root,int x){
         return SearchBst(root->left,x);
     }
         if(root->data < x){
-        //left part 
+        //right part 
         return SearchBst(root->right,x);
     }
     
