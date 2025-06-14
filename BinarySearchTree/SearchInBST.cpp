@@ -31,6 +31,26 @@ bool SearchBst(node* root,int x){
         //left part 
         return SearchBst(root->right,x);
     }
+    
+}
+
+bool SearchBst2(node* root,int x){
+    node *temp = root;
+
+    while(temp!=NULL){
+       if (temp->data ==x){
+        return true ;
+         
+       }
+       if(temp->data >x ){
+        temp = temp->left;
+       }
+       else{
+        temp = temp -> right;
+       }
+    }
+   return false;
+
 }
 int main()
 {
