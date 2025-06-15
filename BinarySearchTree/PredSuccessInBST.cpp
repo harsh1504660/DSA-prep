@@ -13,43 +13,47 @@ class node{
     }
 };
 
-pair<int,int> solve(node* root,int key){
-    //find key
+pair<int,int> solve(node* root, int key){
     node* temp = root;
-    int pred=-1;
-    int suc =-1;
+    int pred = -1;
+    int suc = -1;
 
-    while(temp->data !=key){
-        if(temp->data>key){
-        suc = temp->data;
-        temp=temp->left;
-        
+    // Step 1: Search for the key, and update pred/suc on the go
+    while(temp != NULL){
+        if(temp->data == key){
+            break;
+        }
+        else if(temp->data > key){
+            suc = temp->data;
+            temp = temp->left;
         }
         else{
             pred = temp->data;
             temp = temp->right;
-            
         }
     }
 
-    //pred and succ
+    // Step 2: If key doesn't exist
+    if(temp == NULL){
+        return {pred, suc}; // Key not present, return best pred/succ so far
+    }
 
-    //pred
+    // Step 3: If key exists, find more accurate pred and succ
+    // Pred from left subtree (max of left subtree)
     node* leftTree = temp->left;
-    while(leftTree !=NULL){
+    while(leftTree != NULL){
         pred = leftTree->data;
-        leftTree =  leftTree->right;
+        leftTree = leftTree->right;
     }
 
-    //succ
-        node* rightTree = temp->right;
-    while(rightTree !=NULL){
+    // Succ from right subtree (min of right subtree)
+    node* rightTree = temp->right;
+    while(rightTree != NULL){
         suc = rightTree->data;
-        rightTree =  rightTree->left;
+        rightTree = rightTree->left;
     }
 
-    pair<int,int> ans = make_pair(pred,suc);
-    return ans;
+    return {pred, suc};
 }
 int main()
 {
