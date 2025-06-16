@@ -25,7 +25,7 @@ node* solve(vector<int> &preorder,int min,int max,int &i){
     }
 
 
-    node* root = new node(preorder[i]);
+    node* root = new node(preorder[i++]);
 
     root->left = solve(preorder,min,root->data,i);
     root->right = solve(preorder,root->data,max,i);
