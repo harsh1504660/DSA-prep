@@ -46,7 +46,7 @@ bool isMaxOder(node* root){
         return true;
     }
     if(root->right==NULL){
-        return (root->data > root->right->data);
+        return (root->data > root->left->data);
     }
     else{
         bool left = isMaxOder(root->left);
