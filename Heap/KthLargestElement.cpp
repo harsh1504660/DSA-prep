@@ -11,7 +11,7 @@ int kthElemnet(int arr[],int l,int r,int k){
     }
 
     //step2 :
-    for(int i = k ; i<r ; i++){
+    for(int i = k ; i<=r ; i++){
         if(arr[i] < pq.top()){
             pq.pop();
             pq.push(arr[i]);
@@ -21,7 +21,7 @@ int kthElemnet(int arr[],int l,int r,int k){
     // ans  = pq.top
    int ans = pq.top();
    return ans;
-   
+
 }
 
 int main()
