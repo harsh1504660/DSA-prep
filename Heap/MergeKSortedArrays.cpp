@@ -1,4 +1,14 @@
 #include <bits/stdc++.h> 
+#include<vector>
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    return 0;
+}
 vector<int> mergeKSortedArrays(vector<vector<int>>&kArrays, int k)
 {
     // Write your code here. 
